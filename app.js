@@ -46,4 +46,11 @@ App({
     },
     // 还可以添加其他任意的全局函数和数据
     WeToast,
+    showError: function(error) {
+        wx.showModal({
+            title: '错误',
+            content: error.message,
+            showCancel: false,
+        });
+    }
 })

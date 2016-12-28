@@ -26,7 +26,9 @@ Page({
     }
     AV.Cloud.run('getGuestsOfSalon', params).then(guests => {
       this.setData({ guests: guests });
-    }).catch(console.error);
+    }).catch(error => {
+      app.showError(error);
+    });
   },
 })
 

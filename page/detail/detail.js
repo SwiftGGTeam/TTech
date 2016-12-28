@@ -19,6 +19,8 @@ Page({
     this.setData({ 
       objectId: option.objectId
     });
+    // 创建可重复使用的 WeToast 实例
+    new app.WeToast();
   },
   // 生命周期函数--监听页面初次渲染完成
   onReady () {
@@ -40,7 +42,9 @@ Page({
         }).catch(console.error);
       })
       this.setData({ salon: salon });
-    }).catch(console.error);
+    }).catch(error => {
+      app.showError(error);
+    });
   },
 
   // 自定义事件
@@ -83,14 +87,19 @@ Page({
                   // 报名成功，跳转报名成功页面
                   wx.navigateTo({ url: '../success/success' });
                 } else {
-                  console.log(error);
+                  var error = '报名失败！';
+                  app.showError(error);
                 }
-              }).catch(console.error);
+              }).catch(error => {
+                app.showError(error);
+              });
             }
           }
         });
       }
-    }).catch(console.error);
+    }).catch(error => {
+      app.showError(error);
+    });
   },
   onShareAppMessage: function() {
     var title = this.data.salon.salon_title;

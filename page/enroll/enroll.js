@@ -94,11 +94,15 @@ Page({
                 } else {
                   console.log('error');
                 }
-              }).catch(console.error);
+              }).catch(error => {
+                app.showError(error);
+              });
             } else {
               console.error('write error');
             }
-          }).catch(console.error);
+          }).catch(error => {
+            app.showError(error);
+          });
         }
       }
     });

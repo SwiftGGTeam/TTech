@@ -1,3 +1,5 @@
+<import src="../../libs/wetoast.wxml"/>
+
 <view class="view_detail_base">
     <text class="c-block text_salon_title">{{salon.salon_title}}</text>
     <view class="c-minheight view_host">
@@ -67,7 +69,7 @@
     </view>
     <view class="view_block">
         <navigator class="navigator_more" bindtap="toggleGuests">
-            <text class="c-block text_block_desc">{{salon.salon_guests.length}} 人参加</text>
+            <text class="c-block text_block_desc">{{salon.salon_guests.length}} / {{salon.salon_maxGuests}} 人参加</text>
             <text class="c-block text_more">❯</text>
         </navigator>
         <view class="view_image_list">
@@ -77,3 +79,6 @@
         </view>
     </view>
 </view>
+
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}"/>

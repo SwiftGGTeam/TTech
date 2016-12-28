@@ -20,7 +20,9 @@ Page({
   onReady () {
     AV.Cloud.run('getSalonList').then(salons => {
       this.setData({ salons });
-    }).catch(console.error);
+    }).catch(error => {
+      app.showError(error);
+    });
   },
   // 生命周期函数--监听页面显示
   onShow () {
