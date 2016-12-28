@@ -1,0 +1,46 @@
+<import src="../../libs/wetoast.wxml"/>
+
+<text class="c-block text_title">完善您的信息</text>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput1" placeholder="姓名" type="text"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput2" placeholder="常用昵称" type="text"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput3" placeholder="公司/学校" type="text"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput4" placeholder="Github ID" type="text"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput5" placeholder="联系电话" type="number"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput6" placeholder="联系邮箱" type="text"/>
+    </navigator>
+</view>
+<view class="c-minheight view_input">
+    <navigator class="navigator_input">
+        <input class="c-block c-fullwidth" bindinput="bindKeyInput7" placeholder="自我介绍" type="text"/>
+    </navigator>
+</view>
+<view class="view_corner_button">
+    <navigator class="navigator_corner_button" bindtap="toggleEnroll">
+        <text class="c-block">报名参加</text>
+    </navigator>
+</view>
+
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}"/>

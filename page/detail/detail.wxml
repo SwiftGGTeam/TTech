@@ -1,0 +1,79 @@
+<view class="view_detail_base">
+    <text class="c-block text_salon_title">{{salon.salon_title}}</text>
+    <view class="c-minheight view_host">
+        <image class="image_host" mode="aspectFill" src="{{salon.salon_host_avatar}}"/>
+        <text class="c-block text_host">{{salon.salon_host_nickname}}</text>
+    </view>
+    <block wx:if="{{salon.salon_intro.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">沙龙介绍</text>
+            <text class="c-block text_block_desc">{{salon.salon_intro}}</text>
+        </view>
+    </block>
+    <block wx:if="{{salon.salon_date.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">时间</text>
+            <text class="c-block text_block_desc">{{salon.salon_date}}</text>
+        </view>
+    </block>
+    <block wx:if="{{salon.salon_location.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">地点</text>
+            <text class="c-block text_block_desc">{{salon.salon_location}}</text>
+        </view>
+    </block>
+    <block wx:if="{{salon.salon_speeches.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">分享嘉宾</text>
+            <view class="c-minheight wx-view_JbWxfk" wx:for="{{salon.salon_speeches}}" wx:key="speechList">
+                <view class="c-minheight carditem01">
+                    <view class="wx-view_QvvUkU2">
+                        <image class="wx-image_tBcdCT" mode="aspectFill" src="{{orators[index].guest_avatar}}"/>
+                        <view class="wx-view_cPj0ok">
+                            <text class="c-block wx-text_TvHPc9">{{item.speech_name}}</text>
+                            <text class="c-block wx-text_LS2Jup">{{orators[index].guest_name.length > 0 ? orators[index].guest_name : orators[index].guest_nickname}}</text>
+                        </view>
+                    </view>
+                    <block wx:if="{{item.speech_intro.length > 0}}">
+                        <view class="wx-view_KedDbI">
+                            <text class="c-block text_card_intro_title">主题介绍</text>
+                            <text class="c-block wx-text_6zTs4l">{{item.speech_intro}}</text>
+                        </view>
+                    </block>
+                    <block wx:if="{{orators[index].guest_intro.length > 0}}">
+                        <view class="wx-view_KedDbI">
+                            <text class="c-block text_card_intro_title">嘉宾介绍</text>
+                            <text class="c-block wx-text_6zTs4l">{{orators[index].guest_intro}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{salon.salon_sponsors.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">赞助商</text>
+            <view class="view_image_list">
+                <view class="view_image_corner" wx:for="{{salon.salon_sponsors}}" wx:key="sponsorList">
+                    <image class="image_corner" src="{{item.sponsor_icon}}"/>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="view_corner_button">
+        <navigator class="navigator_corner_button" bindtap="toggleEnroll">
+            <text class="c-block">报名参加</text>
+        </navigator>
+    </view>
+    <view class="view_block">
+        <navigator class="navigator_more" bindtap="toggleGuests">
+            <text class="c-block text_block_desc">{{salon.salon_guests.length}} 人参加</text>
+            <text class="c-block text_more">❯</text>
+        </navigator>
+        <view class="view_image_list">
+            <view class="view_image_corner" wx:for="{{salon.salon_guests}}" wx:key="guestAvatarList">
+                <image class="image_corner" src="{{item}}"/>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,85 @@
+.view_detail_base {
+  padding-bottom: 30px; 
+}
+.text_salon_title {
+    text-align: center; 
+    margin-top: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin-bottom: 0px; 
+}
+.view_host {
+    min-height: 35px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+.image_host {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 30px; 
+    margin-right: 10px; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
+    flex-basis: auto; 
+}
+.text_host {
+    font-size: 13px;
+    font-weight: lighter;
+    color: gray;
+}
+.view_block {
+    padding: 10px 1rem; 
+    border-bottom-color: rgb(237, 237, 237); 
+    border-top: 1px solid rgb(237, 237, 237); 
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+}
+.text_block_title {
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+.text_block_desc {
+    font-size: 13px; 
+}
+.text_card_intro_title {
+    font-size: 13px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+.navigator_more {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+}
+.text_more {
+    font-size: 14px; 
+    color: rgb(166, 166, 166); 
+    margin-right: 10px; 
+}
+.view_image_list {
+    display: flex;  
+    justify-content: flex-start;
+}
+.view_image_corner {
+    width: 36px; 
+    height: 36px; 
+    background-position: 50% 50%;
+    background-size: cover; 
+    border-radius: 48px; 
+    margin-bottom: 5px; 
+    margin-right: 5px; 
+}
+.image_corner {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 48px; 
+    border-bottom-right-radius: 48px; 
+    border-bottom-left-radius: 48px; 
+    border-top-right-radius: 48px; 
+    border-top-left-radius: 48px; 
+}

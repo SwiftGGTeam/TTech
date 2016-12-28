@@ -1,0 +1,13 @@
+<view class="c-minheight view_base">
+    <scroll-view class="scrollview" lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto;" upper-threshold="50">
+        <text class="c-block">报名人员</text>
+        <view class="view_cell">
+            <navigator class="navigator_cell" wx:for="{{guests}}" wx:key="guestsList">
+                <image class="image_cell" mode="aspectFill" src="{{item.guest_avatar}}"/>
+                <view class="view_cell_bottom">
+                    <text class="c-block text_cell_bottom">{{item.guest_nickname.length > 0 ? item.guest_nickname : item.guest_name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>

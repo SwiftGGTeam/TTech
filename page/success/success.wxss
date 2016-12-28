@@ -1,0 +1,33 @@
+.view_success_icon {
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row; 
+    align-items: center; 
+    padding-top: 36px; 
+    margin-bottom: 30px; 
+}
+.view_message {
+    display: block; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-bottom: 25px; 
+    text-align: center; 
+}
+.text_title {
+    font-size: 20px; 
+    margin-bottom: 5px; 
+}
+.text_desc {
+    font-size: 14px; 
+    color: rgb(153, 153, 153); 
+    -webkit-line-clamp: 1; 
+}
+.view_button_back_index {
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+.button_back_index {
+    margin-top: 15px; 
+}

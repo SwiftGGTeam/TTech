@@ -1,0 +1,14 @@
+<view class="c-minheight view_base">
+    <view class="view_success_icon">
+        <icon class="weui-icon_msg" size="94" type="success"/>
+    </view>
+    <view class="view_message">
+        <text class="c-block text_title">报名成功</text>
+        <text class="c-block text_desc">一旦我们确认了您的报名信息，我们会立即通过邮件或者电话与您取得联系，请您保持通信畅通！</text>
+    </view>
+    <view class="view_button_back_index">
+        <button class="button_back_index" size="default" type="default" bindtap="toggleIndex">
+            返回主页
+        </button>
+    </view>
+</view>

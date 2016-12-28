@@ -1,0 +1,27 @@
+<view class="c-minheight wx-view_JbWxfk">
+    <view class="c-minheight carditem01" wx:for="{{salons}}" wx:key="salonsList" data-id="{{index}}" bindtap="toggleDetail">
+        <view class="wx-view_QvvUkU2">
+            <image class="wx-image_tBcdCT" mode="aspectFill" src="{{item.salon_host_avatar}}"/>
+            <view class="wx-view_cPj0ok">
+                <text class="c-block wx-text_TvHPc9">{{item.salon_title}}</text>
+                <text class="c-block wx-text_LS2Jup">{{item.salon_publish_date}}</text>
+            </view>
+        </view>
+        <view class="wx-view_KedDbI">
+            <text class="c-block wx-text_6zTs4l">{{item.salon_intro}}</text>
+        </view>
+        <view class="view_card_bottom">
+            <view class="view_info_counts">
+                <view class="view_count">
+                    <image class="image_count" mode="aspectFit" src="../../resources/images/people_count.png"/>
+                    <text class="c-block text_count">{{item.salon_guests_count}}</text>
+                </view>
+                <view class="view_count">
+                    <image class="image_count" mode="aspectFit" src="../../resources/images/speech_count.png"/>
+                    <text class="c-block text_count">{{item.salon_speeches_count}}</text>
+                </view>
+            </view>
+            <text class="c-block text_detail">查看详情</text>
+        </view>
+    </view>
+</view>
