@@ -1,5 +1,3 @@
-<import src="../../libs/wetoast.wxml"/>
-
 <view class="view_detail_base">
     <text class="c-block text_salon_title">{{salon.salon_title}}</text>
     <view class="c-minheight view_host">
@@ -79,6 +77,3 @@
         </view>
     </view>
 </view>
-
-<!-- wetoast -->
-<template is="wetoast" data="{{...__wetoast__}}"/>

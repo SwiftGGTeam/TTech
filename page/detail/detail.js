@@ -19,8 +19,6 @@ Page({
     this.setData({ 
       objectId: option.objectId
     });
-    // 创建可重复使用的 WeToast 实例
-    new app.WeToast();
   },
   // 生命周期函数--监听页面初次渲染完成
   onReady () {

@@ -1,5 +1,3 @@
-<import src="../../libs/wetoast.wxml"/>
-
 <text class="c-block text_title">完善您的信息</text>
 <view class="c-minheight view_input">
     <navigator class="navigator_input">
@@ -41,6 +39,3 @@
         <text class="c-block">报名参加</text>
     </navigator>
 </view>
-
-<!-- wetoast -->
-<template is="wetoast" data="{{...__wetoast__}}"/>

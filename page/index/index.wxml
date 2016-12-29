@@ -1,4 +1,16 @@
-<view class="c-minheight wx-view_JbWxfk">
+<view class="view_top_banner">
+    <view class="view_banner_elements">
+        <image class="image_banner_avatar" mode="aspectFill" src="{{user.avatarUrl}}"/>
+        <text class="text_banner">{{user.nickName}}</text>
+    </view>
+    <view class="view_banner_elements">
+        <navigator class="navigator_banner" url="../invitation/invitation">
+            <image class="image_banner_button" mode="scaleToFill" src="../../resources/images/my_invitation.png"/>
+        </navigator>
+    </view>
+</view>
+
+<view class="c-minheight wx-view_JbWxfk view_card_index">
     <view class="c-minheight carditem01" wx:for="{{salons}}" wx:key="salonsList" data-id="{{index}}" bindtap="toggleDetail">
         <view class="wx-view_QvvUkU2">
             <image class="wx-image_tBcdCT" mode="aspectFill" src="{{item.salon_host_avatar}}"/>

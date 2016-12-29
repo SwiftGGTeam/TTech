@@ -24,8 +24,6 @@ Page({
     this.setData({ 
       objectId: option.objectId
     });
-    // 创建可重复使用的 WeToast 实例
-    new app.WeToast();
   },
 
   //以下为自定义点击事件
@@ -38,29 +36,23 @@ Page({
     var phone = this.data.phone;
     var email = this.data.email;
     var intro = this.data.intro;
-    var userid = app.globalData.user.objectId;
     var avatar = app.globalData.user.avatarUrl;
     var that = this;
 
     if (name.replace(/[ ]/g,"").length == 0) {
-      this.wetoast.toast({
-        title: '「姓名」字段不能为空',
-        duration: 1000
-      });
+      app.showError('「姓名」字段不能为空');
       return;
     }
     if (phone.replace(/[ ]/g,"").length == 0) {
-      this.wetoast.toast({
-        title: '「联系电话」字段不能为空',
-        duration: 1000
-      });
+      app.showError('「联系电话」字段不能为空');
       return;
     }
     if (email.replace(/[ ]/g,"").length == 0) {
-      this.wetoast.toast({
-        title: '「联系邮箱」字段不能为空',
-        duration: 1000
-      });
+      app.showError('「联系邮箱」字段不能为空');
+      return;
+    }
+    if (avatar.length == 0 || userid.length == 0) {
+      app.showError('当前用户信息加载失败，请尝试刷新本页面或重新加载小程序');
       return;
     }
     wx.showModal({

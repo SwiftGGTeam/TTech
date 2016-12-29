@@ -1,7 +1,5 @@
 // 获得 AV 的引用
 const AV = require('./libs/av-weapp-min.js');
-// 获取 Toast 的引用
-let {WeToast} = require('./libs/wetoast.js');
 
 // App() 函数用来注册一个小程序，用来指定小程序的生命周期。
 // App() 必须在本文件当中注册，并且不能注册多个。
@@ -45,7 +43,6 @@ App({
         // 生命周期函数——监听小程序隐藏，当小程序从前台进入后台的时候会触发
     },
     // 还可以添加其他任意的全局函数和数据
-    WeToast,
     showError: function(error) {
         wx.showModal({
             title: '错误',

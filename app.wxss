@@ -55,12 +55,9 @@ radio-group{
 
 /* 自定义样式 */
 
-/* Toast 样式 */
-@import "libs/wetoast.wxss";
 /* 卡片样式 */
 /* card_view */
 .wx-view_JbWxfk {
-  padding-top: 1rem;
   padding-left: 1rem; 
   padding-right: 1rem; 
 }

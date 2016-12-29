@@ -1,0 +1,36 @@
+<view class="c-minheight wx-view_JbWxfk">
+    <view class="c-minheight carditem01" wx:for="{{invitations}}" wx:key="invitationsList">
+        <view class="c-minheight view_half_circle" />
+        <view class="view_header">
+            <view class="view_header_inside">
+                <image class="image_header_logo" mode="aspectFit" src="../../resources/images/T_salon.png"/>
+                <text class="c-block text_title">T 沙龙</text>
+                <view class="view_header_area">
+                    <text class="c-block text_desc">地区</text>
+                    <text class="c-block text_detail">{{item.salon_area}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="wx-view_KedDbI">
+            <view class="view_desc">
+                <text class="c-block text_desc">T 主题</text>
+                <text class="c-block text_detail">{{item.salon_title}}</text>
+            </view>
+            <view class="view_desc">
+                <text class="c-block text_desc">负责人</text>
+                <text class="c-block text_detail1">{{item.salon_host_name}}</text>
+            </view>
+            <view class="view_desc">
+                <text class="c-block text_desc">地点</text>
+                <text class="c-block text_detail1">{{item.salon_location}}</text>
+            </view>
+            <view class="view_desc">
+                <text class="c-block text_desc">时间</text>
+                <text class="c-block text_detail1">{{item.salon_date}}</text>
+            </view>
+        </view>
+        <map class="map" latitude="{{item.salon_location_point.latitude}}" longitude="{{item.salon_location_point.longitude}}" markers="item.salon_markers" scale="16"/>
+        <image class="image_qrcode" mode="aspectFill" src="http://qr.liantu.com/api.php?&w=200&text={{item.salon_object_id}}"></image>
+        <view class="c-minheight view_bottom" />
+    </view>
+</view>
