@@ -24,6 +24,9 @@ Page({
     this.setData({ 
       objectId: option.objectId
     });
+    wx.setNavigationBarTitle({
+      title: '完善信息',
+    });
   },
 
   //以下为自定义点击事件
@@ -37,6 +40,7 @@ Page({
     var email = this.data.email;
     var intro = this.data.intro;
     var avatar = app.globalData.user.avatarUrl;
+    var userid = app.globalData.user.objectId;
     var that = this;
 
     if (name.replace(/[ ]/g,"").length == 0) {

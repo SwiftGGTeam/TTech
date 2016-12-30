@@ -18,6 +18,9 @@ Page({
     this.setData({ 
       objectId: option.objectId,
     });
+    wx.setNavigationBarTitle({
+      title: '<T> 沙龙报名人员名单',
+    });
   },
   // 生命周期函数--监听页面初次渲染完成
   onReady () {

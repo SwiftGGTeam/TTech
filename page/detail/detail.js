@@ -19,6 +19,9 @@ Page({
     this.setData({ 
       objectId: option.objectId
     });
+    wx.setNavigationBarTitle({
+      title: '<T> 沙龙详情',
+    });
   },
   // 生命周期函数--监听页面初次渲染完成
   onReady () {

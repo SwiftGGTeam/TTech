@@ -1,4 +1,5 @@
-<view class="c-minheight wx-view_JbWxfk">
+<view class="view_base">
+<view class="c-minheight wx-view_JbWxfk view_card_index">
     <view class="c-minheight carditem01" wx:for="{{invitations}}" wx:key="invitationsList">
         <view class="c-minheight view_half_circle" />
         <view class="view_header">
@@ -29,8 +30,9 @@
                 <text class="c-block text_detail1">{{item.salon_date}}</text>
             </view>
         </view>
-        <map class="map" latitude="{{item.salon_location_point.latitude}}" longitude="{{item.salon_location_point.longitude}}" markers="item.salon_markers" scale="16"/>
+        <map class="map" latitude="{{item.salon_location_point.latitude}}" longitude="{{item.salon_location_point.longitude}}" markers="{{item.salon_markers}}" scale="16" bindmarkertap="openWechatMap"/>
         <image class="image_qrcode" mode="aspectFill" src="http://qr.liantu.com/api.php?&w=200&text={{item.salon_object_id}}"></image>
         <view class="c-minheight view_bottom" />
     </view>
+</view>
 </view>
