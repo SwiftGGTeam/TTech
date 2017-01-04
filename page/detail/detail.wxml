@@ -16,6 +16,12 @@
             <text class="c-block text_block_desc">{{salon.salon_date}}</text>
         </view>
     </block>
+    <block wx:if="{{salon.salon_expiry_date.length > 0}}">
+        <view class="view_block">
+            <text class="c-block text_block_title">报名截止日期</text>
+            <text class="c-block text_block_desc">{{salon.salon_expiry_date}}</text>
+        </view>
+    </block>
     <block wx:if="{{salon.salon_location.length > 0}}">
         <view class="view_block">
             <text class="c-block text_block_title">地点</text>
