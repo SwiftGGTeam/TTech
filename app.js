@@ -25,19 +25,6 @@ App({
     },
     onShow: function() {
         // 生命周期函数——监听小程序显示，当小程序启动或者从后台进入前台显示的时候会触发
-        // 获得当前登录用户
-        const user = AV.User.current();
-        // 调用小程序 API，得到用户信息
-        wx.getUserInfo({
-            success: ({userInfo}) => {
-                // 更新当前用户的信息
-                user.set(userInfo).save().then(user => {
-                    // 成功，此时可在控制台中看到更新后的用户信息
-                    this.globalData.user = user.toJSON();
-                    console.log(user.toJSON());
-                }).catch(console.error);
-            }
-        });
     },
     onHide: function() {
         // 生命周期函数——监听小程序隐藏，当小程序从前台进入后台的时候会触发

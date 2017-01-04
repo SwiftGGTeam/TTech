@@ -14,16 +14,31 @@ Page({
 
   // 生命周期函数--监听页面加载
   onLoad () {
-
+    
   },
   // 生命周期函数--监听页面初次渲染完成
   onReady () {
+    var that = this;
     AV.Cloud.run('getSalonList').then(salons => {
-      this.setData({ salons });
+      that.setData({ salons });
     }).catch(error => {
       app.showError(error);
     });
-    this.setData({ user: app.globalData.user });
+    // 获得当前登录用户
+    const user = AV.User.current();
+    // 调用小程序 API，得到用户信息
+    wx.getUserInfo({
+      success: ({userInfo}) => {
+        // 更新当前用户的信息
+        user.set(userInfo).save().then(user => {
+          // 成功，此时可在控制台中看到更新后的用户信息
+          var userData = user.toJSON();
+          app.globalData.user = userData;
+          that.setData({ user: userData });
+          console.log(userData);
+        }).catch(console.error);
+      }
+    });
   },
   // 生命周期函数--监听页面显示
   onShow () {
