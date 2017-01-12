@@ -63,6 +63,11 @@ Page({
       title: '报名',
       content: '是否确认报名？确认后暂不支持主动取消，如果需要取消报名请联系沙龙主办方',
       success: function(res) {
+        wx.showToast({
+          title: '报名信息提交中...',
+          icon: 'loading',
+          duration: 10000
+        });
         if (res.confirm) {
           // 开始完善信息
           var params = {
@@ -84,6 +89,7 @@ Page({
                 'guest_id': result.objectId,
               };
               AV.Cloud.run('enrollSalon', enrollParams).then(result => {
+                wx.hideToast();
                 if (result) {
                   // 报名成功，跳转报名成功页面
                   wx.navigateTo({ url: '../success/success' });
@@ -91,12 +97,15 @@ Page({
                   console.log('error');
                 }
               }).catch(error => {
+                wx.hideToast();
                 app.showError(error);
               });
             } else {
+              wx.hideToast();
               console.error('write error');
             }
           }).catch(error => {
+            wx.hideToast();
             app.showError(error);
           });
         }

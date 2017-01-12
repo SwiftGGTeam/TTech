@@ -28,16 +28,8 @@ Page({
       if (result == null) {
         // 需要，则跳转至报名界面
         wx.showModal({
-          title: '报名',
-          content: '我们需要您完善个人信息才能完成报名，是否前往完善信息？',
-          success: function(res) {
-            if (res.confirm) {
-              var objectId = that.data.objectId;
-              console.log(objectId);
-              // 跳转到报名页面
-              wx.redirectTo({ url: '../enroll/enroll?objectId=' + objectId });
-            }
-          }
+          title: '暂无活动邀请',
+          showCancel: false,
         });
       } else {
         var newparams = {
