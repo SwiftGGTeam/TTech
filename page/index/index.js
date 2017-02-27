@@ -58,6 +58,14 @@ Page({
     
   },
 
+  // 分享
+  onShareAppMessage: function() {
+    return {
+      title: '<T> 沙龙',
+      path: '/page/index/index',
+    };
+  },
+
   // 自定义事件
   toggleDetail: function(e) {
     var id = e.currentTarget.dataset.id, salon = this.data.salons[id], objectId = salon.salon_object_id;

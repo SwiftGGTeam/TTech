@@ -104,10 +104,10 @@ Page({
   },
   onShareAppMessage: function() {
     var title = this.data.salon.salon_title;
+    var objectId = this.data.objectId;
     return {
       title: title,
-      desc: title + '<T> 沙龙即将召开，感兴趣的朋友快来报名参加吧~',
-      path: '/page/detail/detail',
+      path: '/page/detail/detail?objectId=' + objectId,
     };
   },
 
